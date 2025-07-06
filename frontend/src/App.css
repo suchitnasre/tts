@@ -1,0 +1,113 @@
+/* ======== THEME VARIABLES ======== */
+:root {
+  --bg-color: linear-gradient(to bottom right, #f0f4ff, #dff1e1);
+  --container-bg: #ffffff;
+  --text-color: #333;
+  --bubble-bg-user: #d1e7dd;
+  --bubble-bg-assistant: #e2e3e5;
+  --bubble-text-user: #0f5132;
+  --bubble-text-assistant: #333;
+  --border-color: #e0e0e0;
+}
+
+[data-theme='dark'] {
+  --bg-color: linear-gradient(to bottom right, #1e1e2f, #2b2d42);
+  --container-bg: #2e3241;
+  --text-color: #f5f5f5;
+  --bubble-bg-user: #4e8c6b;
+  --bubble-bg-assistant: #55576c;
+  --bubble-text-user: #ffffff;
+  --bubble-text-assistant: #f1f1f1;
+  --border-color: #3c3e55;
+}
+
+/* ======== GLOBAL STYLES ======== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* ======== APP CONTAINER ======== */
+.container {
+  max-width: 1200px;
+  margin: 3em auto;
+  padding: 2.5em;
+  background: var(--container-bg);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* ======== HEADER ======== */
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0 0 1.5em 0;
+}
+
+/* ======== THEME TOGGLE ======== */
+.theme-toggle {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.theme-toggle:hover {
+  background: #222;
+}
+
+/* ======== BUTTON BAR ======== */
+.button-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+/* ======== BUTTON STYLES ======== */
+.mic-button,
+.stop-button,
+.clear-button {
+  padding: 0.65em 1.5em;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mic-button {
+  background: #007bff;
+  color: white;
+}
+.mic-button.active {
+  background: #ffc107;
+  color: black;
+}
+.stop-button {
+  background: #dc3545;
+  color: white;
+}
+.stop-button:hover {
+  background: #c82333;
+}
+.clear-button {
+  background: #6c757d;
+  color: white;
+}
+.clear-button:hover {
+  background: #495057;
+}

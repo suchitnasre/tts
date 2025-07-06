@@ -1,0 +1,19 @@
+.mic-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 0.6em 1.4em;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.mic-button:hover {
+  background: #0056b3;
+}
+
+.mic-button.active {
+  background: #ffc107;
+  color: black;
+}
