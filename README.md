@@ -45,65 +45,43 @@ tts/
 Setup Instructions
 
 1. Clone the Repository:
-
 git clone https://github.com/suchitnasre/tts.git
-
 cd tts
 
 
 
 2. Backend Setup (Flask):
-
 cd backend
-
 conda create -n tts python=3.10 -y
-
 conda activate tts
-
 pip install -r requirements.txt
-
 Create a .env file in backend/:
-
 OPENAI_API_KEY=your_openai_api_key
-
 Run the backend server:
-
 python app.py
 
 
 
 3. Frontend Setup (React):
-
 cd ../frontend
-
 npm install
-
 Create a .env file in frontend/:
-
 REACT_APP_API_BASE_URL=http://localhost:5000/api
-
 Run the frontend: npm start
 
 
 
 How It Works:
-
 1. You click the "Speak" button.
-
 2. Your voice is converted to text in the browser.
-
 3. The text is sent to the Flask backend.
-
 4. The backend sends it to OpenAI's GPT API.
-
 5. The AI response is returned to the frontend.
-
 6. The response is displayed and spoken using text-to-speech.
 
 
 
 Notes:
 - This app uses the browser's Web Speech API, so it works best in Chrome or Edge.
-
 - You have to insert OpenAI API key and only used in the backend .env file.
 
